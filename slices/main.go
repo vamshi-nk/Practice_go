@@ -193,4 +193,43 @@ import(
 	// [1 2 3 4]
 	// [1 2]
 
-  }
+	// convertiong Array to slices
+
+	xarray := [4]int{5,6,7,8}
+	xslice := xarray[:]
+	fmt.Println(xslice)
+
+	// subset of array to slice
+
+	as := [4]int{1,2,3,4}
+	df := as[:2]
+	fd := as[2:] 
+	as[0] = 10
+	fmt.Println("as :",as)
+	fmt.Println("df :",df)
+	fmt.Println("fd :",fd)
+	
+	// converting Slices to Arrays
+
+	 xSlice := []int{1,2,3,4,}
+	 xArray := [4]int(xSlice)
+
+	 smallArray := [2]int(xSlice)
+	 fullArray := [4]int(xSlice)
+	 xSlice[0] = 10
+	 
+	 fmt.Println("xSlice :",xSlice)
+	 fmt.Println("xArray :",xArray)
+	 fmt.Println("smallArray :",smallArray)
+	 fmt.Println("fullArray :",fullArray)
+
+	 // runtime error if specify array len > slice
+	 panicArray := [5]int(xSlice)
+	 fmt.Println("panicArray :",panicArray)
+
+	 // ouputs : 
+	 // panic: runtime error: cannot convert slice with length 4 to array or pointer to array with length 5
+  
+	  
+	
+}
