@@ -121,5 +121,32 @@ import(
 	p := make([]string ,0,5)
 	p = append(p, "q","r","s","t")
 
+	//q := p[:2]
+	//r := p[2:]
+
+	//modified
+
+	q := p[:2:2]
+	r := p[2:4:4]
+
+	fmt.Println(cap(p),cap(q),cap(r))
+	q = append(q, "i","j","k","l")
+	p = append(p, "x")
+	r = append(r, "y")
+
+	fmt.Println("p : ",p)
+	fmt.Println("q : ",q)
+	fmt.Println("r : ",r)
+
+	// before modify code output			// after output
+	/*
+		5 5 3								5 2 2
+		p :  [q r s t y]					p :  [q r s t x]
+		q :  [q r i j k l]					q :  [q r i j k l]
+		r :  [s t y	]						r :  [s t y]
+											
+	*/
+
+	
 	
 }
