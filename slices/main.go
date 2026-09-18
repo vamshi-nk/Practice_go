@@ -147,6 +147,50 @@ import(
 											
 	*/
 
+	// copy built-in function 
+
+	ab := []int {1,2,3,4,5}
+	cd := make([]int,4)
+	num := copy(ab,cd)
+
+	fmt.Println(y,num)
+
+	// sub slice copy
+
+	ef := []int {1,2,3,4}
+	gh := make([]int ,2)
+	nums := copy(ef,gh)
 	
-	
-}
+	fmt.Println("nums :",nums)
+
+	// copy from middle
+
+	ij := []int {1,2,3,4}
+	kl := make([]int,2)
+	numb:= copy(kl,ij[:2])
+
+	fmt.Println(numb)
+
+	//copied values print
+
+	qw := []int{1,2,3,4}	// output
+	er := [4]int{5,6,7,8}	//[5 6]
+	ty := make([]int,2)		//[1 2 3 4]
+	copy(ty,er[:])
+	fmt.Println(ty)
+	copy(er[:],qw)
+	fmt.Println(er)
+
+	// prac
+
+	ui := []int {1,2,3,4}
+	pa := make([]int,2)
+	copy(pa,ui)
+	fmt.Println(ui)
+	fmt.Println(pa)
+
+	// output
+	// [1 2 3 4]
+	// [1 2]
+
+  }
