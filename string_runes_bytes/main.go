@@ -33,7 +33,7 @@ func main(){
 	fmt.Println(c,c2,c3,c4)
 	fmt.Println(len(c)) // prints 11 cause takes four bytes to represent the sun imoji
 
-	// type conversation
+	// type conversion
 
 	var d rune = 'x'
 	var e string = string(a)
