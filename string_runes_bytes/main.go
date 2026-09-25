@@ -22,6 +22,16 @@ func main(){
 		"\n a4 :",a4,
 	)
 	fmt.Printf("%c\n ",b) // prints t char
+	/*
+		output
+			s : Hello there 
+			b : 116 
+			a1 : Hello there 
+			a2 : o t 
+			a3 : Hello 
+			a4 : there
+			t
+	*/
 	
 	// hello 🌞
 
@@ -33,6 +43,12 @@ func main(){
 	fmt.Println(c,c2,c3,c4)
 	fmt.Println(len(c)) // prints 11 cause takes four bytes to represent the sun imoji
 
+	/*
+		Hello 🌞
+		o � 
+		Hello 🌞
+		10		
+	*/
 	// type conversion
 
 	var d rune = 'x'
@@ -46,4 +62,10 @@ func main(){
     f, f,
     g, g,
 	)
+	/*
+		120 int32
+		Hello there string
+		121 uint8
+		y string
+	*/
 }	
